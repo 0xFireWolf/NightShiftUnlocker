@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D50AF8241ED05E12008E6138 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D50AF8231ED05E12008E6138 /* README.md */; };
 		D51ED56C1ECDF7F10084868D /* NightShiftUnlocker.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D51ED56B1ECDF7F10084868D /* NightShiftUnlocker.hpp */; };
 		D51ED56E1ECDF7F10084868D /* NightShiftUnlocker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51ED56D1ECDF7F10084868D /* NightShiftUnlocker.cpp */; };
 		D51ED5821ECDF8120084868D /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D51ED5761ECDF8120084868D /* kern_api.hpp */; };
@@ -33,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D50AF8231ED05E12008E6138 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D51ED5681ECDF7F10084868D /* NightShiftUnlocker.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightShiftUnlocker.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51ED56B1ECDF7F10084868D /* NightShiftUnlocker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NightShiftUnlocker.hpp; sourceTree = "<group>"; };
 		D51ED56D1ECDF7F10084868D /* NightShiftUnlocker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NightShiftUnlocker.cpp; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				D54A22791ED02B5400CFC17D /* OSVersion.cpp */,
 				D54A227A1ED02B5400CFC17D /* OSVersion.hpp */,
 				D51ED56F1ECDF7F10084868D /* Info.plist */,
-				D50AF8231ED05E12008E6138 /* README.md */,
 			);
 			path = NightShiftUnlocker;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D50AF8241ED05E12008E6138 /* README.md in Sources */,
 				D54A227B1ED02B5400CFC17D /* OSVersion.cpp in Sources */,
 				D51ED56E1ECDF7F10084868D /* NightShiftUnlocker.cpp in Sources */,
 				D51ED59C1ECE0CC20084868D /* kern_start.cpp in Sources */,
