@@ -38,7 +38,7 @@ NightShiftUnlocker is licensed under BSD 3-Clause.
 - [Apple](https://www.apple.com) for Night Shift
 - [vit9696](https://github.com/vit9696) for [Lilu](https://github.com/vit9696/Lilu)
 
-##### NightShiftUnlocker is brought to you by [FireWolf](https://www.firewolf.science). Enjoy : )  
+#### NightShiftUnlocker is brought to you by [FireWolf](https://www.firewolf.science). Enjoy : )  
 
 ---
 
@@ -52,7 +52,7 @@ NightShiftUnlocker 需要 macOS 10.12.4 以及以上的系统，并需要 Lilu 1
 
 ### 使用方法
 请先关闭 SIP 系统完整性保护功能  
-从 Lilu 和 NightShiftUnlocker 的代码仓库下载最新版本的内核扩展  
+从 [Lilu](https://github.com/vit9696/Lilu/releases) 和 [NightShiftUnlocker](https://github.com/Austere-J/NightShiftUnlocker/releases) 仓库的发布页面下载最新版本的内核扩展  
 用命令行或者驱动安装工具([KCPM Utility Pro](https://www.firewolf.science/2016/09/kcpm-utility-pro-v6-brand-new-kexts-ezinstaller-macos-sierra-supported-repairing-permissions-configuring-rootless-and-more/), [Kext Utility](http://cvad-mac.narod.ru/index/0-4) 等)将两个内核扩展安装到 `/Library/Extensions/`.
 修复权限，重建缓存，重新启动机器。
 
@@ -79,4 +79,4 @@ NightShiftUnlocker 使用 BSD 3-Clause 许可
 ### 鸣谢与其他
 NightShiftUnlocker 的实现离不开 [vit9696](https://github.com/vit9696) 的 [Lilu](https://github.com/vit9696/Lilu) 内核扩展
 
-##### NightShiftUnlocker 由 [FireWolf](https://www.firewolf.science) 为您提供，ENJOY : )
+#### NightShiftUnlocker 由 [FireWolf](https://www.firewolf.science) 为您提供，ENJOY : )
