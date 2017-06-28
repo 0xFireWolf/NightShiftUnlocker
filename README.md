@@ -5,7 +5,7 @@ A Lilu plugin that unlocks the Night Shift function for all Macs.
 You don't have to manually modify and codesign the CoreBrightness binary any longer.
 
 ### Requirement
-NightShiftUnlocker requires macOS Sierra 10.12.4 or later and [Lilu](https://github.com/vit9696/Lilu) 1.1.0 or later.
+NightShiftUnlocker requires macOS Sierra 10.12.4 or later and [Lilu](https://github.com/vit9696/Lilu) 1.1.5 or later.
 
 ### Installation
 Disable the System Integrity Protection.  
@@ -27,9 +27,16 @@ It uses a global function `CBU_IsNightShiftSupported()` and an array of supporte
 Instead of modifying the minimum version of supported Mac models, I make this function always return `true`.
 
 ### Update Logs
-Version | Summary
-------- | -------
-1.0 @ 2017.05.20 | Initial release
+#### 2.0 @ 2017.06.28
+- Dynamically generate binary patches. (Thanks to vit9696's new APIs)
+- Supports the latest macOS High Sierra.
+- Supports Clover's kext injection.
+##### **Known issue in this version**
+Night Shift panel may not show up in the System Preference >> Display on some machines.
+I have already noticed this issue, and I am still working on this.
+
+#### 1.0 @ 2017.05.20
+- Initial release.
 
 ### License
 NightShiftUnlocker is licensed under BSD 3-Clause.
@@ -48,7 +55,7 @@ NightShiftUnlocker 是一个为全系列 Mac 动态解锁此功能的插件。
 用户安装后无需手动修改二进制里的最低机型以及重新签名等操作，并且也不会受到系统更新导致覆盖原来文件的限制。
 
 ### 系统要求
-NightShiftUnlocker 需要 macOS 10.12.4 以及以上的系统，并需要 Lilu 1.1.0 版本。
+NightShiftUnlocker 需要 macOS 10.12.4 以及以上的系统，并需要 Lilu 1.1.5 版本。
 
 ### 使用方法
 请先关闭 SIP 系统完整性保护功能  
@@ -69,9 +76,16 @@ Night Shift 作为 10.12.4 的新功能由系统私有框架 CoreBrightness.fram
 如此用户不需要再手动去修改最低机型的定义以及重新签名二进制了，也不会受到系统升级导致原有二进制文件被覆盖的限制。  
 
 ### 更新日志
-版本 | 日志
---- | ---
-1.0 @ 2017.05.20 | 初始版本
+#### 2.0 @ 2017.06.28
+- 动态生成二进制补丁 (感谢 vit9696 开发的新API)
+- 支持最新的 macOS High Sierra
+- 支持 Clover 的驱动注入功能
+##### **已知问题**
+在某些机器上，Night Shift 面板可能不会在『系统偏好设置 >> 显示』里面显示。
+我已经注意到这个问题，正在尝试解决中...
+
+#### 1.0 @ 2017.05.20
+- 初始版本
 
 ### 授权许可
 NightShiftUnlocker 使用 BSD 3-Clause 许可

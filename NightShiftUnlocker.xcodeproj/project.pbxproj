@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D51ED56C1ECDF7F10084868D /* NightShiftUnlocker.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D51ED56B1ECDF7F10084868D /* NightShiftUnlocker.hpp */; };
-		D51ED56E1ECDF7F10084868D /* NightShiftUnlocker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51ED56D1ECDF7F10084868D /* NightShiftUnlocker.cpp */; };
 		D51ED5821ECDF8120084868D /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D51ED5761ECDF8120084868D /* kern_api.hpp */; };
 		D51ED5831ECDF8120084868D /* kern_compression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D51ED5771ECDF8120084868D /* kern_compression.hpp */; };
 		D51ED5841ECDF8120084868D /* kern_config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D51ED5781ECDF8120084868D /* kern_config.hpp */; };
@@ -25,16 +23,10 @@
 		D51ED5931ECDF8280084868D /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D51ED5901ECDF8280084868D /* libkmod.a */; };
 		D51ED5941ECDF8280084868D /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51ED5911ECDF8280084868D /* plugin_start.cpp */; };
 		D51ED59C1ECE0CC20084868D /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51ED59B1ECE0CC20084868D /* kern_start.cpp */; };
-		D52A2D671ECECF20008583A6 /* Patches.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D52A2D651ECECF20008583A6 /* Patches.cpp */; };
-		D52A2D681ECECF20008583A6 /* Patches.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D52A2D661ECECF20008583A6 /* Patches.hpp */; };
-		D54A227B1ED02B5400CFC17D /* OSVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D54A22791ED02B5400CFC17D /* OSVersion.cpp */; };
-		D54A227C1ED02B5400CFC17D /* OSVersion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D54A227A1ED02B5400CFC17D /* OSVersion.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D51ED5681ECDF7F10084868D /* NightShiftUnlocker.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightShiftUnlocker.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		D51ED56B1ECDF7F10084868D /* NightShiftUnlocker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NightShiftUnlocker.hpp; sourceTree = "<group>"; };
-		D51ED56D1ECDF7F10084868D /* NightShiftUnlocker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NightShiftUnlocker.cpp; sourceTree = "<group>"; };
 		D51ED56F1ECDF7F10084868D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D51ED5761ECDF8120084868D /* kern_api.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_api.hpp; sourceTree = "<group>"; };
 		D51ED5771ECDF8120084868D /* kern_compression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_compression.hpp; sourceTree = "<group>"; };
@@ -52,10 +44,6 @@
 		D51ED5901ECDF8280084868D /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libkmod.a; sourceTree = "<group>"; };
 		D51ED5911ECDF8280084868D /* plugin_start.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plugin_start.cpp; sourceTree = "<group>"; };
 		D51ED59B1ECE0CC20084868D /* kern_start.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_start.cpp; sourceTree = "<group>"; };
-		D52A2D651ECECF20008583A6 /* Patches.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Patches.cpp; sourceTree = "<group>"; };
-		D52A2D661ECECF20008583A6 /* Patches.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Patches.hpp; sourceTree = "<group>"; };
-		D54A22791ED02B5400CFC17D /* OSVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OSVersion.cpp; sourceTree = "<group>"; };
-		D54A227A1ED02B5400CFC17D /* OSVersion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OSVersion.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +79,7 @@
 			children = (
 				D51ED58E1ECDF8280084868D /* Library */,
 				D51ED5751ECDF8120084868D /* Headers */,
-				D51ED56B1ECDF7F10084868D /* NightShiftUnlocker.hpp */,
-				D51ED56D1ECDF7F10084868D /* NightShiftUnlocker.cpp */,
-				D52A2D651ECECF20008583A6 /* Patches.cpp */,
-				D52A2D661ECECF20008583A6 /* Patches.hpp */,
 				D51ED59B1ECE0CC20084868D /* kern_start.cpp */,
-				D54A22791ED02B5400CFC17D /* OSVersion.cpp */,
-				D54A227A1ED02B5400CFC17D /* OSVersion.hpp */,
 				D51ED56F1ECDF7F10084868D /* Info.plist */,
 			);
 			path = NightShiftUnlocker;
@@ -139,7 +121,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51ED56C1ECDF7F10084868D /* NightShiftUnlocker.hpp in Headers */,
 				D51ED5821ECDF8120084868D /* kern_api.hpp in Headers */,
 				D51ED58D1ECDF8120084868D /* plugin_start.hpp in Headers */,
 				D51ED58A1ECDF8120084868D /* kern_policy.hpp in Headers */,
@@ -148,13 +129,11 @@
 				D51ED5861ECDF8120084868D /* kern_file.hpp in Headers */,
 				D51ED5921ECDF8280084868D /* LegacyIOService.h in Headers */,
 				D51ED5881ECDF8120084868D /* kern_mach.hpp in Headers */,
-				D52A2D681ECECF20008583A6 /* Patches.hpp in Headers */,
 				D51ED5841ECDF8120084868D /* kern_config.hpp in Headers */,
 				D51ED5831ECDF8120084868D /* kern_compression.hpp in Headers */,
 				D51ED58B1ECDF8120084868D /* kern_user.hpp in Headers */,
 				D51ED5851ECDF8120084868D /* kern_disasm.hpp in Headers */,
 				D51ED5871ECDF8120084868D /* kern_iokit.hpp in Headers */,
-				D54A227C1ED02B5400CFC17D /* OSVersion.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,10 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54A227B1ED02B5400CFC17D /* OSVersion.cpp in Sources */,
-				D51ED56E1ECDF7F10084868D /* NightShiftUnlocker.cpp in Sources */,
 				D51ED59C1ECE0CC20084868D /* kern_start.cpp in Sources */,
-				D52A2D671ECECF20008583A6 /* Patches.cpp in Sources */,
 				D51ED5941ECDF8280084868D /* plugin_start.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
