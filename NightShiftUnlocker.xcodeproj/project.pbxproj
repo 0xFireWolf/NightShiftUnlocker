@@ -23,6 +23,8 @@
 		D51ED5931ECDF8280084868D /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D51ED5901ECDF8280084868D /* libkmod.a */; };
 		D51ED5941ECDF8280084868D /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51ED5911ECDF8280084868D /* plugin_start.cpp */; };
 		D51ED59C1ECE0CC20084868D /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D51ED59B1ECE0CC20084868D /* kern_start.cpp */; };
+		D56FFB641F03D59100C07AE5 /* OSVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D56FFB621F03D59100C07AE5 /* OSVersion.cpp */; };
+		D56FFB651F03D59100C07AE5 /* OSVersion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D56FFB631F03D59100C07AE5 /* OSVersion.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D51ED5901ECDF8280084868D /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libkmod.a; sourceTree = "<group>"; };
 		D51ED5911ECDF8280084868D /* plugin_start.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plugin_start.cpp; sourceTree = "<group>"; };
 		D51ED59B1ECE0CC20084868D /* kern_start.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_start.cpp; sourceTree = "<group>"; };
+		D56FFB621F03D59100C07AE5 /* OSVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OSVersion.cpp; sourceTree = "<group>"; };
+		D56FFB631F03D59100C07AE5 /* OSVersion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OSVersion.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				D51ED58E1ECDF8280084868D /* Library */,
 				D51ED5751ECDF8120084868D /* Headers */,
 				D51ED59B1ECE0CC20084868D /* kern_start.cpp */,
+				D56FFB621F03D59100C07AE5 /* OSVersion.cpp */,
+				D56FFB631F03D59100C07AE5 /* OSVersion.hpp */,
 				D51ED56F1ECDF7F10084868D /* Info.plist */,
 			);
 			path = NightShiftUnlocker;
@@ -126,6 +132,7 @@
 				D51ED58A1ECDF8120084868D /* kern_policy.hpp in Headers */,
 				D51ED5891ECDF8120084868D /* kern_patcher.hpp in Headers */,
 				D51ED58C1ECDF8120084868D /* kern_util.hpp in Headers */,
+				D56FFB651F03D59100C07AE5 /* OSVersion.hpp in Headers */,
 				D51ED5861ECDF8120084868D /* kern_file.hpp in Headers */,
 				D51ED5921ECDF8280084868D /* LegacyIOService.h in Headers */,
 				D51ED5881ECDF8120084868D /* kern_mach.hpp in Headers */,
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56FFB641F03D59100C07AE5 /* OSVersion.cpp in Sources */,
 				D51ED59C1ECE0CC20084868D /* kern_start.cpp in Sources */,
 				D51ED5941ECDF8280084868D /* plugin_start.cpp in Sources */,
 			);

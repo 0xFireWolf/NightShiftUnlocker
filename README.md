@@ -27,6 +27,9 @@ It uses a global function `CBU_IsNightShiftSupported()` and an array of supporte
 Instead of modifying the minimum version of supported Mac models, I make this function always return `true`.
 
 ### Update Logs
+#### 2.1 @ 2017.06.29
+- Fix an issue that Night Shift panel may not show up in the System Preference >> Display.
+
 #### 2.0 @ 2017.06.28
 - Dynamically generate binary patches. (Thanks to vit9696's new APIs)
 - Supports the latest macOS High Sierra.
@@ -76,6 +79,9 @@ Night Shift 作为 10.12.4 的新功能由系统私有框架 CoreBrightness.fram
 如此用户不需要再手动去修改最低机型的定义以及重新签名二进制了，也不会受到系统升级导致原有二进制文件被覆盖的限制。  
 
 ### 更新日志
+#### 2.1 @ 2017.06.29
+- 修复 Night Shift 面板在系统偏好设置里不显示的问题
+
 #### 2.0 @ 2017.06.28
 - 动态生成二进制补丁 (感谢 vit9696 开发的新API)
 - 支持最新的 macOS High Sierra

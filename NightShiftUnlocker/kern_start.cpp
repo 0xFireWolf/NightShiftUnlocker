@@ -67,13 +67,15 @@ static const char* CoreBrightnessBinaryAA = "/System/Library/PrivateFrameworks/C
 
 static const char* symbolAA = "_CBU_IsNightShiftSupported";
 
-static const size_t numProcessesAA = 2;
+static const size_t numProcessesAA = 3;
 
 static UserPatcher::ProcInfo processesAA[] =
 {
     {"/usr/libexec/corebrightnessd", 28, SectionActive},
     
-    {"/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter", 85, SectionActive}
+    {"/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter", 85, SectionActive},
+    
+    {"/Applications/System Preferences.app/Contents/MacOS/System Preferences", 70, SectionActive}
 };
 
 static const size_t numBytesBufferAA = 32;
@@ -200,23 +202,6 @@ static void generatePatches(void* unused, KernelPatcher &patcher)
         memcpy(&replBytesAA[offset], buffer + offset, length - offset);
         
         IOLog("NightShiftUnlocker::generatePatches() Binary patches have been generated.\n");
-        
-        // DEBUG
-        IOLog("\nNightShiftUnlocker::generatePatches() NEW Find: ");
-        
-        for (int index = 0; index < length; index++)
-        {
-            IOLog("%02X", findBytesAA[index]);
-        }
-        
-        IOLog("\nNightShiftUnlocker::generatePatches() NEW Repl: ");
-        
-        for (int index = 0; index < length; index++)
-        {
-            IOLog("%02X", replBytesAA[index]);
-        }
-        
-        IOLog("\n");
         
         delete [] buffer;
     }
