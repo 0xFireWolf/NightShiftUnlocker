@@ -114,14 +114,26 @@ public:
 		vm_address_t startDATA;
 		vm_address_t endDATA;
 	};
-	
+
 	/**
 	 *  Structure describing relevant processes run
 	 */
 	struct ProcInfo {
+		/**
+		 *  Process matching flags
+		 */
+		enum ProcFlags {
+			MatchExact  = 0,
+			MatchAny    = 1,
+			MatchPrefix = 2,
+			MatchSuffix = 4,
+			MatchMask   = MatchExact | MatchAny | MatchPrefix | MatchSuffix
+		};
+
 		const char *path;
 		uint32_t len;
 		uint32_t section;
+		uint32_t flags {MatchExact};
 	};
 	
 	/**
@@ -146,6 +158,11 @@ public:
 	 *  @param user     pointer that will be passed to the callback function
 	 */
 	bool registerPatches(ProcInfo **procs, size_t procNum, BinaryModInfo **mods, size_t modNum, t_BinaryLoaded callback, void *user);
+	
+	/**
+	 *  Activates monitoring functions if necessary
+	 */
+	void activate();
 	
 private:
 	
@@ -385,6 +402,11 @@ private:
 	 *  Kernel auth listener handle
 	 */
 	kauth_listener_t listener {nullptr};
+	
+	/**
+	 *  Patcher status
+	 */
+	bool activated {false};
 	
 	/**
 	 *  Validation cookie
