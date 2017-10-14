@@ -5,7 +5,7 @@ A Lilu plugin that unlocks the Night Shift function for all Macs.
 You don't have to manually modify and codesign the CoreBrightness binary any longer.
 
 ### Requirement
-NightShiftUnlocker requires macOS Sierra 10.12.4 or later and [Lilu](https://github.com/vit9696/Lilu) 1.1.5 or later.
+NightShiftUnlocker requires macOS Sierra 10.12.4 or later and [Lilu](https://github.com/vit9696/Lilu) 1.2.0 or later.
 
 ### Installation
 Disable the System Integrity Protection.  
@@ -19,6 +19,7 @@ Feel free to report any bugs or ask questions.
 
 ### How to compile
 All Lilu related headers and library can be found at the latest **DEBUG** version of Lilu.
+I use Xcode 8.3.3 on macOS High Sierra 10.13. If you choose Xcode 9 to compile NSU, please replace `memcpy()` with `lmemcpy()`.
 
 ### Background Info
 Apple introduced the Night Shift function as of macOS 10.12.4.  
@@ -27,6 +28,12 @@ It uses a global function `CBU_IsNightShiftSupported()` and an array of supporte
 Instead of modifying the minimum version of supported Mac models, I make this function always return `true`.
 
 ### Update Logs
+#### 2.2 @ 2017.10.13
+- Support Lilu 1.2.0.
+- Support macOS High Sierra 10.13 (17A405).
+- NightShiftUnlocker will no longer be loaded in Recovery mode.
+- This is an "experimental" release as Apple slightly adds more functionalities to CoreBrightness.framework, a new patch may be required. Please report any issue ASAP.
+
 #### 2.1 @ 2017.06.29
 - Fix an issue that Night Shift panel may not show up in the System Preference >> Display.
 
@@ -58,7 +65,7 @@ NightShiftUnlocker 是一个为全系列 Mac 动态解锁此功能的插件。
 用户安装后无需手动修改二进制里的最低机型以及重新签名等操作，并且也不会受到系统更新导致覆盖原来文件的限制。
 
 ### 系统要求
-NightShiftUnlocker 需要 macOS 10.12.4 以及以上的系统，并需要 Lilu 1.1.5 版本。
+NightShiftUnlocker 需要 macOS 10.12.4 以及以上的系统，并需要 Lilu 1.2.0 版本。
 
 ### 使用方法
 请先关闭 SIP 系统完整性保护功能  
@@ -71,6 +78,7 @@ NightShiftUnlocker 需要 macOS 10.12.4 以及以上的系统，并需要 Lilu 1
 
 ### 如何编译
 NightShiftUnlocker 项目所使用的 Lilu 头文件和 API 均可以在 DEBUG 版本的 Lilu 里找到。
+我当前的编译环境是 Xcode 8.3.3 + macOS High Sierra 10.13，如果使用 Xcode 9 编译的话，请将 memcpy 换成 lmemcpy。
 
 ### 背景信息
 Night Shift 作为 10.12.4 的新功能由系统私有框架 CoreBrightness.framework 来提供。  
@@ -79,6 +87,12 @@ Night Shift 作为 10.12.4 的新功能由系统私有框架 CoreBrightness.fram
 如此用户不需要再手动去修改最低机型的定义以及重新签名二进制了，也不会受到系统升级导致原有二进制文件被覆盖的限制。  
 
 ### 更新日志
+#### 2.2 @ 2017.10.13
+- 支持 Lilu 1.2.0 版本。
+- 支持 macOS High Sierra 10.13 (17A405)。
+- 在 Recovery 恢复环境中，Night Shift Unlocker 不会再自动加载了。
+- 本次更新属于实验性更新。苹果在 10.13 正式版里为 CoreBrightness.framework 增加了一些功能，补丁可能需要更新下。请反馈你在使用过程中发现的任何问题。
+
 #### 2.1 @ 2017.06.29
 - 修复 Night Shift 面板在系统偏好设置里不显示的问题
 
