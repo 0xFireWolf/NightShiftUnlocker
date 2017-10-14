@@ -53,6 +53,14 @@ static uint8_t* readBytes(const char* fromPath, off_t atOffset, size_t numBytes)
     return buffer;
 }
 
+static void lmemcpy(void* dst, const void* src, size_t length)
+{
+    for (int index = 0; index < length; index++)
+    {
+        ((uint8_t*) dst)[index] = ((uint8_t*) src)[index];
+    }
+}
+
 // MARK: Boot Arguments
 static const char* bootArgDisable[] = {"-nsuoff"};
 
@@ -69,13 +77,15 @@ static const char* symbolAA = "_CBU_IsNightShiftSupported";
 
 static const size_t numProcessesAA = 3;
 
+using ProcFlags = UserPatcher::ProcInfo::ProcFlags;
+
 static UserPatcher::ProcInfo processesAA[] =
 {
-    {"/usr/libexec/corebrightnessd", 28, SectionActive},
+    {"/usr/libexec/corebrightnessd", 28, SectionActive, UserPatcher::ProcInfo::ProcFlags::MatchExact},
     
-    {"/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter", 85, SectionActive},
+    {"/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter", 85, SectionActive, UserPatcher::ProcInfo::ProcFlags::MatchExact},
     
-    {"/Applications/System Preferences.app/Contents/MacOS/System Preferences", 70, SectionActive}
+    {"/Applications/System Preferences.app/Contents/MacOS/System Preferences", 70, SectionActive, UserPatcher::ProcInfo::ProcFlags::MatchExact}
 };
 
 static const size_t numBytesBufferAA = 32;
@@ -84,6 +94,7 @@ static const size_t numBytesPatchAA = 5;
 
 static uint8_t findBytesAA[numBytesBufferAA] = {};
 
+// TODO: MORE TEST REQUIRED
 static uint8_t replBytesAA[numBytesBufferAA] =
 {
     0x31, 0xC0,     // xor eax, eax
@@ -258,6 +269,8 @@ PluginConfiguration ADDPR(config) =
     
     parseModuleVersion(xStringify(MODULE_VERSION)),
     
+    LiluAPI::Requirements::AllowNormal,
+    
     bootArgDisable,
     
     1,
@@ -270,7 +283,7 @@ PluginConfiguration ADDPR(config) =
     
     1,
     
-    KernelVersion::Sierra,
+    KernelVersion::HighSierra,
     
     KernelVersion::HighSierra,
     
