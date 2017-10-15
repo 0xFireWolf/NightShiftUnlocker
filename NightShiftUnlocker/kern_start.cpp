@@ -283,7 +283,7 @@ PluginConfiguration ADDPR(config) =
     
     1,
     
-    KernelVersion::HighSierra,
+    KernelVersion::Sierra,
     
     KernelVersion::HighSierra,
     
