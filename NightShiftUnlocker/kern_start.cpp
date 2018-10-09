@@ -285,7 +285,7 @@ PluginConfiguration ADDPR(config) =
     
     KernelVersion::Sierra,
     
-    KernelVersion::HighSierra,
-    
+    KernelVersion::Mojave,
+
     startUnlocker
 };
