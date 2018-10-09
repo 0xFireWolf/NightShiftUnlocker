@@ -195,7 +195,7 @@ static void generatePatches(void* unused, KernelPatcher &patcher)
         return;
     }
     
-    IOLog("NightShiftUnlocker::generatePatches() Found symbol @ %02X.\n", address);
+    IOLog("NightShiftUnlocker::generatePatches() Found symbol @ %02llX.\n", address);
     
     size_t length = numBytesBufferAA;
     
@@ -203,14 +203,14 @@ static void generatePatches(void* unused, KernelPatcher &patcher)
     
     if (buffer != NULL)
     {
-        IOLog("NightShiftUnlocker::generatePatches() %d bytes have been read.\n", length);
+        IOLog("NightShiftUnlocker::generatePatches() %zu bytes have been read.\n", length);
         
         // TODO: Future: Multiple Patches???
         size_t offset = numBytesPatchAA;
         
-        memcpy(&findBytesAA[0], buffer, length);
+        lmemcpy(&findBytesAA[0], buffer, length);
         
-        memcpy(&replBytesAA[offset], buffer + offset, length - offset);
+        lmemcpy(&replBytesAA[offset], buffer + offset, length - offset);
         
         IOLog("NightShiftUnlocker::generatePatches() Binary patches have been generated.\n");
         
@@ -269,7 +269,7 @@ PluginConfiguration ADDPR(config) =
     
     parseModuleVersion(xStringify(MODULE_VERSION)),
     
-    LiluAPI::Requirements::AllowNormal,
+    LiluAPI::RunningMode::AllowNormal,
     
     bootArgDisable,
     
@@ -285,7 +285,7 @@ PluginConfiguration ADDPR(config) =
     
     KernelVersion::Sierra,
     
-    KernelVersion::HighSierra,
-    
+    KernelVersion::Mojave,
+
     startUnlocker
 };
