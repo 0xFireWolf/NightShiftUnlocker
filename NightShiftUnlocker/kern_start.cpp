@@ -208,9 +208,9 @@ static void generatePatches(void* unused, KernelPatcher &patcher)
         // TODO: Future: Multiple Patches???
         size_t offset = numBytesPatchAA;
         
-        memcpy(&findBytesAA[0], buffer, length);
+        lmemcpy(&findBytesAA[0], buffer, length);
         
-        memcpy(&replBytesAA[offset], buffer + offset, length - offset);
+        lmemcpy(&replBytesAA[offset], buffer + offset, length - offset);
         
         IOLog("NightShiftUnlocker::generatePatches() Binary patches have been generated.\n");
         
