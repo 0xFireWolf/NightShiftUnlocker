@@ -195,7 +195,7 @@ static void generatePatches(void* unused, KernelPatcher &patcher)
         return;
     }
     
-    IOLog("NightShiftUnlocker::generatePatches() Found symbol @ %02X.\n", address);
+    IOLog("NightShiftUnlocker::generatePatches() Found symbol @ %02llX.\n", address);
     
     size_t length = numBytesBufferAA;
     
@@ -203,7 +203,7 @@ static void generatePatches(void* unused, KernelPatcher &patcher)
     
     if (buffer != NULL)
     {
-        IOLog("NightShiftUnlocker::generatePatches() %d bytes have been read.\n", length);
+        IOLog("NightShiftUnlocker::generatePatches() %zu bytes have been read.\n", length);
         
         // TODO: Future: Multiple Patches???
         size_t offset = numBytesPatchAA;
