@@ -269,7 +269,7 @@ PluginConfiguration ADDPR(config) =
     
     parseModuleVersion(xStringify(MODULE_VERSION)),
     
-    LiluAPI::Requirements::AllowNormal,
+    LiluAPI::RunningMode::AllowNormal,
     
     bootArgDisable,
     
